@@ -1,11 +1,36 @@
+@import "_reset.scss";
+
 body{
-  font-family:georgia;
+  font-family:helvetica;
   font-size:24px;
 }
-
-#logo{
-  width:130px;
-  img{
-    width:100%;
+#masthead{
+  h1{
+    font-size:150%;
   }
+  width:320px;
+  margin:0 auto;
+  text-align:center;
+  #logo{
+    width:130px;
+    margin:0 auto;
+    img{
+      width:100%;
+    }
+  }
+}
+section{
+  width:320px;
+  margin:2em auto;
+}
+article{margin:1em 0;}
+#highlights{
+  border: 2px solid black;
+}
+
+#content{
+  
+}
+#footer{
+  
 }
