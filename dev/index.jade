@@ -1,3 +1,4 @@
+include index_front.html
 doctype 5
 html(lang="en")
   head
@@ -39,9 +40,15 @@ html(lang="en")
                   - cheddar
                   - secret sauce
                   - green leaf
+
         #beer
-        #wine
+        {% for post in site.posts %}
+        {{ post.content }}
+        {% endfor %}
         
-    footer 
+          
+        #wine 
+      
+        footer 
     
    

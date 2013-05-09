@@ -1,3 +1,2 @@
-name: Your New Jekyll Site
-pygments: true
-exclude: [/dev]
+name: Steakout
+exclude: [dev]
