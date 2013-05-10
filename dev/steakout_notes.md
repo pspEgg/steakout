@@ -22,3 +22,13 @@
 	- what to eat today.
 	- new beers?
 	- afternoon discounts.
+	
+## Log
+
+2013-05-09
+
+They updated their beer spreadsheets! Now there's a gluten free option, as with previosly when I looked at it.
+
+YAML in github pages seems to be the beset solution to allowing data entry.
+
+***

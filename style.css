@@ -1,0 +1,44 @@
+/* Remove Browser Style - http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/ */
+/* Added Figure Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, figure, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline; }
+
+body {
+  font-family: helvetica;
+  font-size: 24px; }
+
+#masthead {
+  width: 320px;
+  margin: 0 auto;
+  text-align: center; }
+  #masthead h1 {
+    font-size: 150%; }
+  #masthead #logo {
+    width: 130px;
+    margin: 0 auto; }
+    #masthead #logo img {
+      width: 100%; }
+
+section {
+  width: 320px;
+  margin: 2em auto; }
+
+article {
+  margin: 1em 0; }
+
+#highlights {
+  border: 2px solid black; }
