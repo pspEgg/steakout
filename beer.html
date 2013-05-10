@@ -1,12 +1,97 @@
 ---
 title: beer menu
 beers: 
-  - [Bear Republic, Racer 5, IPA, 7.00%]
-  - 
-    - Kombucha
-    - Diehard
+  - Brewery: Bear Republic
+    Beer: Racer 5
+    Style: IPA
+    ABV: 7.00%
+  - Brewery: Bison
+    Beer: Hop Cuveé
+    Style: West Coast Ale
+    ABV: 5.50%
+  - Brewery: Firehouse
+    Beer: Strong Arm Porter
+    Style: Porter
+    ABV: 7.10%
+  - Brewery: Firehouse
+    Beer: IPA
+    Style: American IPA
+    ABV: 6.80%
+  - Brewery: Gaffel
+    Beer: Kӧlsch
+    Style: Kӧlsch
+    ABV: 4.80%
+  - Brewery: Hofbräu
+    Beer: Maibock
+    Style: Maibock
+    ABV: 7.20%
+  - Brewery: Hofbräu
+    Beer: Original Lager
+    Style: Lager
+    ABV: 5.10%
+  - Brewery: Hofbräu
+    Beer: Dunkel
+    Style: Dunkel Lager
+    ABV: 5.50%
+  - Brewery: Hofbräu
+    Beer: Hefe-Weiss
+    Style: Wheat
+    ABV: 5.10%
+  - Brewery: Koningshoeven
+    Beer: La Trappe
+    Style: Quadrupel
+    ABV: 10.00%
+  - Brewery: Mad River
+    Beer: Jamaica Red
+    Style: American Amber
+    ABV: 6.50%
+  - Brewery: Marin
+    Beer: Abbey Special
+    Style: Abbey Dubbel
+    ABV: 6.80%
+  - Brewery: Moylan&#39;s
+    Beer: Kilt lifter
+    Style: Scotch Ale
+    ABV: 8.00%
+  - Brewery: Rubicon
+    Beer: Monkey Knife Fight
+    Style: Pale Ale
+    ABV: 5.00%
+  - Brewery: Schwaben
+    Beer: Naturtübe
+    Style: Unfiltered Pilsner
+    ABV: 5.00%
+  - Brewery: Weltenburger
+    Beer: Anno 1050
+    Style: Marzen/Oktoberfest
+    ABV: 5.50%
+  - Brewery: Weltenburger
+    Beer: Hefe-Weiss Hell
+    Style: Hefeweizen
+    ABV: 5.40%
   
 ---
 
-<h1>{{page.title}}</h1>
-{{page.beers[1][0]}}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title></title>
+</head>
+
+<style type="text/css">
+
+</style>
+
+<body>
+
+<h1></h1>
+<ul>
+{% for beer in page.beers%}
+<li>{{beer.Beer}}</li>
+{% endfor %}
+</ul>
+</body>
+
+</html>
