@@ -20,33 +20,21 @@ html(lang="en")
       h1 Biergarten Steakout
       
     section#content
-      article#highlights
-        h2 Gluten-free on Tap:
-        p
-        h2 Grass-fed Special:
+      section#highlights
+        
       section#info
-        ul
-          li address
-          li 11am to 9pm everyday
-          li later on thurs, fri, sat
-          li email: info@steakout.us
-          li seating is plentiful
-          li no phone orders
+        
       section#menu
         #grill
-          :markdown
-            - Beef Burger
-              - Expeirence
-                  - cheddar
-                  - secret sauce
-                  - green leaf
-
+         
         #beer
-        {% for post in site.posts %}
-        {{ post.content }}
-        {% endfor %}
-        
-          
+        h2 Beer Menu
+        ul
+          {% for menu in site.pages %}
+          {% for beer in menu.beers %}
+          li {{beer.Beer}}
+          {% endfor %}
+          {% endfor %}
         #wine 
       
         footer 

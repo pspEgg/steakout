@@ -21,27 +21,18 @@
       <h1>Biergarten Steakout</h1>
     </header>
     <section id="content">
-      <article id="highlights">
-        <h2>Gluten-free on Tap:</h2>
-        <p></p>
-        <h2>Grass-fed Special:</h2>
-      </article>
-      <section id="info">
-        <ul>
-          <li>address</li>
-          <li>11am to 9pm everyday</li>
-          <li>later on thurs, fri, sat</li>
-          <li>email: info@steakout.us</li>
-          <li>seating is plentiful</li>
-          <li>no phone orders</li>
-        </ul>
-      </section>
+      <section id="highlights"></section>
+      <section id="info"></section>
       <section id="menu">
-        <div id="grill"><ul><li>Beef Burger<ul><li>Expeirence<ul><li>cheddar</li><li>secret sauce</li><li>green leaf</li></ul></li></ul></li></ul>
-        </div>
-        <div id="beer"></div>{% for post in site.posts %}
-        {{ post.content }}
-        {% endfor %}
+        <div id="grill"></div>
+        <div id="beer"></div>
+        <h2>Beer Menu</h2>
+        <ul>
+          {% for menu in site.pages %}
+          {% for beer in menu.beers %}
+          <li>{{beer.Beer}}</li>{% endfor %}
+          {% endfor %}
+        </ul>
         <div id="wine"> </div>
         <footer> </footer>
       </section>

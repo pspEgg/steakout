@@ -18,27 +18,18 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   vertical-align: baseline; }
 
 body {
-  font-family: helvetica;
-  font-size: 24px; }
+  font-family: avenir;
+  font-size: 24px;
+  padding: 0 5%; }
 
-#masthead {
-  width: 320px;
-  margin: 0 auto;
-  text-align: center; }
-  #masthead h1 {
-    font-size: 150%; }
-  #masthead #logo {
-    width: 130px;
-    margin: 0 auto; }
-    #masthead #logo img {
-      width: 100%; }
+#masthead #logo {
+  width: 130px;
+  margin: 0 auto; }
+  #masthead #logo img {
+    width: 100%; }
 
-section {
-  width: 320px;
-  margin: 2em auto; }
-
-article {
-  margin: 1em 0; }
-
-#highlights {
-  border: 2px solid black; }
+h1, h2, h3, h4 {
+  text-align: center;
+  font-family: baskerville;
+  font-weight: 800;
+  font-size: 150%; }
