@@ -1,55 +1,29 @@
-include index_front.html
 doctype 5
 html(lang="en")
   head
     meta(charset="utf-8")
     meta(name="viewport", content="width=device-width")
-    
     title Biergarten Steakout | Grass Fed Grill &amp; Beer Garden
-    meta(name="description", content="Steakout is half beer garden serving 18 beers on draught with gluten free options, half grass-fed beef and lamb grill. Our 120 german-imported benches sit at 383 Castro Street in Mountain View, California")
-    meta(name="keywords", content="gluten free, grass-fed, sausages, beef, lamb, local, beer garden")
-    meta(name="author", content="pspEgg.co")
-    
     link(rel="stylesheet", href="style.css")
   
   body
     header#masthead
-      aside#logo 
-        //include _logo_svg.html
-        img(src="logo.png")
-      h1 Bier Garten
-      
+      h1 BIERGARTEN STEAKOUT
     section#content
-      section#highlights
-        :markdown
-          We have a new **gluten free** this week, 
-          and our house one-pounder ground is still
-          at lunch. 
-
+      section#news
+          
       section#info
-        :markdown
-          [address](#)
-          [email](#)
-          [voice-message](#)
         
-
-      section#menu
-        #grill
-        h2 Grill
-        #beer
-        h2 Beer
+        
+      section#beer
+        h2
         ul
-          {% for menu in site.pages %}
-          {% for beer in menu.beers %}
-          li {{beer.Beer}} 
-            span.highlight
-              {% if beer.Style contains 'Gluten' %}
-              {{beer.Style}}
-              {% endif %}
-          {% endfor %}
-          {% endfor %}
-        #wine 
-        h2 Wine
-        footer 
-    
+          li Racer 15
+            span Bear Republic Gluten Free 8.00%
+      section#grill
+        h2 
+        h3
+        ul
+          li eXperience
+             span $7.25 
    

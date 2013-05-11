@@ -1,22 +1,17 @@
+$r: rgb(164,50,26);
+$g: rgb(146,154,0);
+
 @import "_reset.scss";
 
 body{
-  font-family:avenir;
-  font-size:24px;
+  font-family:gill sans;
+  font-size:18px;
   padding:0 5%;
 }
 
 #masthead{
-  #logo{
-    width:130px;
-    margin:0 auto;
-    img{
-      width:100%;
-    }
-  }
+  
 }
-
-
 
 h1,h2,h3,h4{
   text-align: center;
@@ -25,15 +20,15 @@ h1,h2,h3,h4{
   font-size:150%;
 }
 
-.small{
-  font-size:0.8em;
-  margin-left:0.5em;
-}
-.highlight{
-  font-weight:800;
-  color:#bada55;
-}
-
 ul{
   list-style:none;
+  border-left:0.5em solid $g;
 }
+
+.r {
+  color:white;
+  background-color:$r;
+  padding:0.3em 0.3em;
+}//Table Sign
+
+
