@@ -17,26 +17,39 @@ html(lang="en")
       aside#logo 
         //include _logo_svg.html
         img(src="logo.png")
-      h1 Biergarten Steakout
+      h1 Bier Garten
       
     section#content
       section#highlights
-        
+        :markdown
+          We have a new **gluten free** this week, 
+          and our house one-pounder ground is still
+          at lunch. 
+
       section#info
+        :markdown
+          [address](#)
+          [email](#)
+          [voice-message](#)
         
+
       section#menu
         #grill
-         
+        h2 Grill
         #beer
-        h2 Beer Menu
+        h2 Beer
         ul
           {% for menu in site.pages %}
           {% for beer in menu.beers %}
-          li {{beer.Beer}}
+          li {{beer.Beer}} 
+            span.highlight
+              {% if beer.Style contains 'Gluten' %}
+              {{beer.Style}}
+              {% endif %}
           {% endfor %}
           {% endfor %}
         #wine 
-      
+        h2 Wine
         footer 
     
    
