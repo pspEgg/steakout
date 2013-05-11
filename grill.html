@@ -1,0 +1,37 @@
+---
+title: grill
+grill:
+  Beef:
+    -   name: Experience
+        ingredients: [Sharp cheddar, secret sauce, green leaf lettuce, sliced tomato] 
+        price: [5.oz. $8.75 8.oz. $11.75]
+    -   name: Euphoria
+        ingredients: [Fried cornmeal, onion strings, sharp cheddar, horseradish mayo]
+    -   name: Alabama
+        ingredients: [Sharp cheddar, bacon, tomato, lettuce, red onion, avocado, BBQ sauce]
+    -   name: Southwest
+        ingredients: [Bacon, pepper jack cheese, guacamole, lettuce, tomato, chipotle sauce]
+    -   name: Green Chili
+        ingredients: [Sharp cheddar, poblano, anaheim, jalapeño, serrano, avocado aioli]
+    -   name: Undressed
+        ingredients: [Plain on a bun]
+
+#  - Cheddar cheese +50¢, veggies on the side +50¢
+
+  # Split with space and alternate
+ # "  $8.75 $11.75 $8.75 $11.75 $8.75 $11.75 $9.25 $12.25 $7.75 $10.75"
+
+---
+
+{{page.title}}
+
+<hr>
+
+{{page.grill}}
+
+<hr>
+
+{% for item in page.grill.Beef %}
+{{item.ingredients}}
+<hr>
+{% endfor %}
