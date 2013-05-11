@@ -1,52 +1,52 @@
 ---
-
+title: Menu
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title>Biergarten Steakout | Grass Fed Grill &amp; Beer Garden</title>
-    <meta name="description" content="Steakout is half beer garden serving 18 beers on draught with gluten free options, half grass-fed beef and lamb grill. Our 120 german-imported benches sit at 383 Castro Street in Mountain View, California">
-    <meta name="keywords" content="gluten free, grass-fed, sausages, beef, lamb, local, beer garden">
-    <meta name="author" content="pspEgg.co">
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <header id="masthead">
-      <aside id="logo"> 
-        <!--include _logo_svg.html--><img src="logo.png">
-      </aside>
-      <h1>Bier Garten</h1>
-    </header>
-    <section id="content">
-      <section id="highlights"><p>We have a new <strong>gluten free</strong> this week, 
-and our house one-pounder ground is still
-at lunch. </p>
-      </section>
-      <section id="info"><p><a href="#">address</a>
-<a href="#">email</a>
-<a href="#">voice-message</a></p>
-      </section>
-      <section id="menu">
-        <div id="grill"></div>
-        <h2>Grill</h2>
-        <div id="beer"></div>
-        <h2>Beer</h2>
-        <ul>
-          {% for menu in site.pages %}
-          {% for beer in menu.beers %}
-          <li>{{beer.Beer}} <span class="highlight">
-              {% if beer.Style contains 'Gluten' %}
-              {{beer.Style}}
-              {% endif %}</span></li>{% endfor %}
-          {% endfor %}
-        </ul>
-        <div id="wine"> </div>
-        <h2>Wine</h2>
-        <footer> </footer>
-      </section>
-    </section>
-  </body>
+    <title></title>
+</head>
+
+<style type="text/css">
+body{
+  font-family:verdana; 
+}
+h1,h2,h3{
+  font-family: georgia;
+}
+.aside{
+	font-style: italic;
+	color:#8a8a8a
+}
+</style>
+
+<body>
+
+<h1>STEAKOUT</h1>
+
+<h2>BIERGARTEN</h2>
+
+{% assign beers = site.pages[0].beers %}
+
+<ul class="beers">
+{% for beer in beers %}
+<li>
+<span class="aside">{{beer.Brewery}}</span>
+{{beer.Beer}}
+<span class="aside">{{beer.Style}} | {{beer.ABV}}</span>
+</li>
+{% endfor %}
+</ul>
+
+
+
+<h2>LOCAL FOODS</h2>
+
+
+
+</body>
+
 </html>
