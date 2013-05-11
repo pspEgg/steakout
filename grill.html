@@ -39,7 +39,6 @@ grill:
       - name: Veggie Burger
         ingredients: [House-fried falafel patty, shredded onion, cabbage, tzatziki sauce, red pepper pesto]
         price: $9.25
-  
   sides:
     name: Sides
     list:
@@ -59,21 +58,19 @@ grill:
       - name: Small Garden Salad 
         ingredients: [Mixed-green, tomato, cucumber, red wine vinaigrette]
         price: $4.75
-        
   salads:  
     name: Salads
     list:
-      - name: Spinach & Chicken Salad
+      - name: Spinach and Chicken Salad
         ingredients: [Marinated mushrooms, tomatoes, sharp cheddar, avocado, hard-boiled egg, bacon, and slaw vinaigrette]
         price: $10.75
       - name: Cranberry-Walnut Salad
-        ingredietns: Mixed greens, fuji apples, blue cheese, balsamic vinaigrette –$7.95
-      - name: Chopped Garden Salad:
+        ingredients: [Mixed greens, fuji apples, blue cheese, balsamic vinaigrette]
+        price: $7.95
+      - name: Chopped Garden Salad
         ingredients: [Mixed greens, tomatoes, cucumbers, peppers, green beans, red onion, radishes, celery, blue cheese, pickled onions, and red wine vinaigrette]
         price: $8.25
-    extras: Add a patty: Beef, turkey or veggie +$3.00, lamb +$4.75
-
-
+    extras: Add a patty. Beef, turkey or veggie +$3.00, lamb +$4.75
   sandwiches:
     name: Sandwiches
     text: Choice of Russet fries, coleslaw, or German potato salad. Sweet potato fries (add $1.00)
@@ -84,12 +81,9 @@ grill:
       - name: Chicken Sandwich
         ingredients: [Grilled chicken breast, roasted peppers, mozzarella, spinach-basil pesto, wheat roll]
         price: $10.75
-      - name: Gooooey Grilled Cheese:
+      - name: Gooooey Grilled Cheese
         ingredients: Tomato and bacon
         price: $7.25
-      
-
-
   sausages:
     name: House-Made Sausages
     text: |
@@ -97,39 +91,58 @@ grill:
         + Meat is pasture-raised, antibiotic & hormone-free
         + Made without nitrites, nitrates, or phosphates
         + House-ground, stuffed, and aged
-
   kids:
-    name: Kids’ Menu: (10 & under)
-      
-  - name: Combo
-    price: 
-      2 oz. Burger, fries and soda: $5.75
-      Cheeseburger: $5.95
-  - name: Single
-    price: 
-      2 oz. Burger: $3.75, 
-      Cheeseburger: $3.95
-  - name: Soft Drink
-    price: $2.50
-    name: Milk
-    price: $1.50
+    name: Kids’ Menu (10 & under)
+    list:  
+      - name: Combo
+        price: 
+          2 oz. Burger, fries and soda: $5.75
+          Cheeseburger: $5.95
+      - name: Single
+        price: 
+          2 oz. Burger: $3.75
+          Cheeseburger: $3.95
+      - name: Soft Drink
+        price: $2.50
+      - name: Milk
+        price: $1.50
 
   dessert:
     name: Chocolate Chip Cookies
     text: Baked in-house daily (Limited Supply)
     price: $3.25
-
----
   
+    
+---  
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title></title>
+</head>
+
+<style type="text/css">
+
+</style>
+
+<body>
+
+<h1></h1>
+
+
   {{page.title}}
 
+  
   <hr>
 
-  {{page.grill.Beef}}
-
-  <hr>
-
-  {% for item in page.grill.Beef.list %}
-  {{item.ingredients}} : {{item.price}}
-  <hr>
+  {% for item in page.grill %}
+  {% for i in item %}
+  {{i}}<hr>
   {% endfor %}
+  {% endfor %}
+  
+</body>
+
+</html>
