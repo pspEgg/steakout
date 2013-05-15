@@ -119,7 +119,7 @@ grill:
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0">
-    <title></title>
+    <title>Menu 2.0</title>
 </head>
 
 <style type="text/css">
@@ -149,7 +149,7 @@ display: inline;
 color:#333;
 padding:0, 0.2em;
 }
-#grill{
+.grill{
   width:92%;
   margin:0 auto;
 }
@@ -159,12 +159,14 @@ padding:0, 0.2em;
 </style>
 
 <body>
+<section class="wrapper">
 
-<h1>hey guys</h1>
+<header>
+<h1>Steakout</h1>
+</header>
 
-<section id="grill">
+<section class="grill">
 {% for c in page.grill %}
-  <article class="catagory">  
   <h3>{{c[1].name}}</h3>
   
   {% for merch in c[1].list %}
@@ -183,18 +185,18 @@ padding:0, 0.2em;
     {% endfor %}    
     </span>
   </h4>
-
-  <ul>
-  {% for i in merch.ingredients %}
-  <li>{{i}}</li>
-  {% endfor %}
-  </ul>
+  
+  <p>
+  {% for i in merch.ingredients %}{{i}}, {% endfor %}
+  </p>
   
   {% endfor %}
-  </article>
+
 {% endfor %}
 </section>
-  
+
+</section>
 </body>
+
 
 </html>
