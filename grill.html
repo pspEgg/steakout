@@ -88,9 +88,9 @@ grill:
     name: House-Made Sausages
     text: |
         See specials menu for today’s selection.
-        + Meat is *pasture-raised, antibiotic & hormone-free*
-        + Made without nitrites, nitrates, or phosphates
-        + House-ground, stuffed, and aged
+        Meat is *pasture-raised, antibiotic & hormone-free*
+        Made without nitrites, nitrates, or phosphates
+        House-ground, stuffed, and aged
   kids:
     name: Kids’ Menu (10 & under)
     list:  
@@ -119,13 +119,18 @@ grill:
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0">
-    <title>Menu 2.0</title>
+    <title>Steakout | Grill</title>
 </head>
 
 <style type="text/css">
 body{
 font-family: baskerville;
 }
+.grill{
+  width:93%;
+  margin:0 auto;
+}
+
 h3{
 text-align: center;
 }
@@ -137,67 +142,48 @@ h4 .price{
 display: inline-block;
 color:#222;
 float:right;
-//position: absolute;
-//right:0px;
 border: 1px solid #eee;
 }
-ul{
-list-style: none;
+ol,
+ul {
+    padding: 0 0 0 40px;
 }
-ul li{
-display: inline;
-color:#333;
-padding:0, 0.2em;
-}
-.grill{
-  width:92%;
-  margin:0 auto;
-}
-.catagory{
-  
+small{
+font-size:80%
 }
 </style>
 
 <body>
-<section class="wrapper">
-
-<header>
-<h1>Steakout</h1>
-</header>
-
-<section class="grill">
-{% for c in page.grill %}
-  <h3>{{c[1].name}}</h3>
-  
-  {% for merch in c[1].list %}
-  
-  <h4>
-  {{merch.name}}
-    <span class="price">
-    {% for p in merch.price %}
+  <section class="wrapper">  
+  <section class="grill">
+  <h2>Grill Menu</h2>
+  {% for c in page.grill %}
+    <h3>{{c[1].name}}</h3>
+    
+    {% for merch in c[1].list %}
+      <h4>
+      {{merch.name}}
+        <span class="price">
+        {% for p in merch.price %}
+          {% if p[0] == nil %}
+            {{p}}
+          {% else %}
+            {{p[0]}}: {{p[1]}}
+          {% endif %}  
+        {% endfor %}    
+        </span>
+      </h4>
       
-      {% if p[0] == nil %}
-        {{p}}
-      {% else %}
-      {{p[0]}}: {{p[1]}}
-      {% endif %}
-      
-    {% endfor %}    
-    </span>
-  </h4>
+        <p>
+          {% for i in merch.ingredients %}{{i}}, {% endfor %}
+        </p>
+    {% endfor %}
   
-  <p>
-  {% for i in merch.ingredients %}{{i}}, {% endfor %}
-  </p>
+    {{c[1].text | markdownify}}
   
   {% endfor %}
-
-  {{c[1].text | markdownify}}
-
-{% endfor %}
-</section>
-
-</section>
+  </section> 
+  </section>
 </body>
 
 
