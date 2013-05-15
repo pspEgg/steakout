@@ -88,7 +88,7 @@ grill:
     name: House-Made Sausages
     text: |
         See specials menu for today’s selection.
-        + Meat is pasture-raised, antibiotic & hormone-free
+        + Meat is *pasture-raised, antibiotic & hormone-free*
         + Made without nitrites, nitrates, or phosphates
         + House-ground, stuffed, and aged
   kids:
@@ -191,6 +191,8 @@ padding:0, 0.2em;
   </p>
   
   {% endfor %}
+
+  {{c[1].text | markdownify}}
 
 {% endfor %}
 </section>
