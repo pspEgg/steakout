@@ -126,13 +126,17 @@ grill:
 <style type="text/css">
 body{
 font-family: verdana;
-}
-section{
+width:100%;
 margin:0;
+padding:0;
+}
+article, section{
+margin:0;
+padding:0;
 }
 .menu{
-  width:93%;
-  margin:0 auto;
+  width:100%;
+  margin:0;
 }
 h1,h2,h3,h4,h5,h6{
 font-family: Gill Sans;
@@ -166,13 +170,28 @@ ul {
 small{
 font-size:80%
 }
+
+/* Layout */
+.menu{
+  width:100%;
+  margin:0 auto;
+  position: relative;
+}
+article{
+float:left;
+width:46%;
+margin:0 2%;
+}
+
 </style>
 
 <body>
   <section class="wrapper">  
-  <section class="menu">
   <h2>Grill Menu</h2>
+  <section class="menu">
+  
   {% for c in page.grill %}
+  <article class="{{c[0]}}">
     <h3>{{c[1].name}}</h3>
     
     {% for merch in c[1].list %}
@@ -195,7 +214,7 @@ font-size:80%
     {% endfor %}
   
     {{c[1].text | markdownify}}
-  
+  </article>
   {% endfor %}
   </section> 
   </section>
