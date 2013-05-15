@@ -98,18 +98,19 @@ grill:
         ingredients: [2 oz. Burger, fries and soda]
         price: {Plain: $5.75, Cheeseburger: $5.95}
       - name: Single
-        price: 
-          2 oz. Burger: $3.75
-          Cheeseburger: $3.95
+        ingredients: [2 oz. Burger]
+        price: {Plain: $3.75, Cheeseburger: $3.95}
       - name: Soft Drink
         price: $2.50
       - name: Milk
         price: $1.50
 
   dessert:
-    name: Chocolate Chip Cookies
-    text: Baked in-house daily (Limited Supply)
-    price: $3.25
+    name: Dessert
+    list:
+      - name: Chocolate Chip Cookies
+        ingredients: [Baked in-house daily (Limited Supply)]
+        price: $3.25
   
     
 ---  
@@ -124,25 +125,39 @@ grill:
 
 <style type="text/css">
 body{
-font-family: baskerville;
+font-family: verdana;
 }
-.grill{
+section{
+margin:0;
+}
+.menu{
   width:93%;
   margin:0 auto;
 }
-
+h1,h2,h3,h4,h5,h6{
+font-family: Gill Sans;
+font-weight: 800;
+}
 h3{
+font-size:1.3em;
+margin: 0.8em 0;
 text-align: center;
 }
+/*H4_burger_sausage_etc*/
 h4{
-position: relative;
-border:1px solid #eee;
+margin: 0.5em 0;
 }
 h4 .price{
+font-weight:400;
 display: inline-block;
 color:#222;
 float:right;
-border: 1px solid #eee;
+margin:0;
+}
+/*P_menu*/
+.menu p{
+clear: both;
+margin:0.5em 0;
 }
 ol,
 ul {
@@ -155,7 +170,7 @@ font-size:80%
 
 <body>
   <section class="wrapper">  
-  <section class="grill">
+  <section class="menu">
   <h2>Grill Menu</h2>
   {% for c in page.grill %}
     <h3>{{c[1].name}}</h3>
@@ -168,15 +183,15 @@ font-size:80%
           {% if p[0] == nil %}
             {{p}}
           {% else %}
-            {{p[0]}}: {{p[1]}}
+            {{p[0]}}: {{p[1]}} 
           {% endif %}  
         {% endfor %}    
         </span>
       </h4>
       
-        <p>
+        <p><small>
           {% for i in merch.ingredients %}{{i}}, {% endfor %}
-        </p>
+        </small></p>
     {% endfor %}
   
     {{c[1].text | markdownify}}
