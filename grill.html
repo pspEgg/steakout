@@ -95,9 +95,8 @@ grill:
     name: Kids’ Menu (10 & under)
     list:  
       - name: Combo
-        price: 
-          2 oz. Burger, fries and soda: $5.75
-          Cheeseburger: $5.95
+        ingredients: [2 oz. Burger, fries and soda]
+        price: {Plain: $5.75, Cheeseburger: $5.95}
       - name: Single
         price: 
           2 oz. Burger: $3.75
@@ -137,8 +136,9 @@ border:1px solid #eee;
 h4 .price{
 display: inline-block;
 color:#222;
-position: absolute;
-right:0px;
+float:right;
+//position: absolute;
+//right:0px;
 border: 1px solid #eee;
 }
 ul{
