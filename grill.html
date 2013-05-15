@@ -119,29 +119,81 @@ grill:
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0">
     <title></title>
 </head>
 
 <style type="text/css">
-
+body{
+font-family: baskerville;
+}
+h3{
+text-align: center;
+}
+h4{
+position: relative;
+border:1px solid #eee;
+}
+h4 .price{
+display: inline-block;
+color:#222;
+position: absolute;
+right:0px;
+border: 1px solid #eee;
+}
+ul{
+list-style: none;
+}
+ul li{
+display: inline;
+color:#333;
+padding:0, 0.2em;
+}
+#grill{
+  width:92%;
+  margin:0 auto;
+}
+.catagory{
+  
+}
 </style>
 
 <body>
 
-<h1></h1>
+<h1>hey guys</h1>
 
-
-  {{page.title}}
-
+<section id="grill">
+{% for c in page.grill %}
+  <article class="catagory">  
+  <h3>{{c[1].name}}</h3>
   
-  <hr>
+  {% for merch in c[1].list %}
+  
+  <h4>
+  {{merch.name}}
+    <span class="price">
+    {% for p in merch.price %}
+      
+      {% if p[0] == nil %}
+        {{p}}
+      {% else %}
+      {{p[0]}}: {{p[1]}}
+      {% endif %}
+      
+    {% endfor %}    
+    </span>
+  </h4>
 
-  {% for item in page.grill %}
-  {% for i in item %}
-  {{i}}<hr>
+  <ul>
+  {% for i in merch.ingredients %}
+  <li>{{i}}</li>
   {% endfor %}
+  </ul>
+  
   {% endfor %}
+  </article>
+{% endfor %}
+</section>
   
 </body>
 
