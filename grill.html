@@ -42,7 +42,6 @@ grill:
         ingredients: [House-fried falafel patty, shredded onion, cabbage, tzatziki sauce, red pepper pesto]
         price: $9.25
         
-        
   - class: sausages
     name: House-Made Sausages
     text: |
@@ -128,97 +127,13 @@ grill:
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Steakout | Grill</title>
 </head>
 
-<style type="text/css">
-body{
-font-size:13px;
-font-family: verdana;
-width:100%;
-margin:0;
-padding:0;
-color: #eee;
-background-color: #333
-}
-article, section{
-margin:0;
-padding:0;
-}
-.menu{
-  width:100%;
-  margin:0;
-}
-h1,h2,h3,h4,h5,h6{
-font-family: Gill Sans;
-font-weight: 800;
-}
-h2{
-letter-spacing: -0.065em;
-text-align:center;
-color:#222;
-background-color:#eee;
-}
-h3{
-font-size:1.3em;
-margin: 0.8em 0;
-text-align: center;
-}
-/*H4_burger_sausage_etc*/
-h4{
-margin:1em 0 0.2em 0;
-}
-h4 .price{
-font-weight:400;
-display: inline-block;
-float:right;
-margin:0;
-}
-h4 .price span{
-margin-left: 0.5em;
-}
-/*P_menu*/
-.menu p{
-clear: both;
-margin: 0 0 1em 0.5em;
-}
-ol,
-ul {
-    padding: 0 0 0 40px;
-}
-.details{
-font-size:80%
-}
-
-/* Default 2 Column Layout */
-.menu{
-  width:100%;
-  margin:0 auto;
-  position: relative;
-}
-article{
-float:left;
-width:46%;
-margin:0 2% 2em 2%;
-}
-.clear{
-clear:both;
-width:100%;
-visibility: hidden;
-}
-/* Narrow Screen, Say iPhone in Portrait */
-@media only screen and (max-width: 470px){
-article{
-float:none;
-width:95%;
-margin:0 auto 1em auto;
-}
-}
-</style>
-
 <body>
-  <section class="wrapper">  
-  <h2>&#10026; DARINGMENUPAGE 10</h2>
+  <section id="wrapper">  
+  <h2>&#10026; DARINGMENUPAGE 20</h2>
   <section class="menu">
   {% for category_name in page.display_order %}
     {% if category_name == "BREAK" %}
@@ -226,7 +141,7 @@ margin:0 auto 1em auto;
     {% else %}
       {% for c in page.grill %}
       {% if c.class == category_name %}
-      <article class="{{c.class}}">
+      <article class="{{c.class}}, grill">
         <h3>{{c.name}}</h3>
         
         {% for merch in c.list %}
