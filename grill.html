@@ -1,7 +1,8 @@
 ---
 title: grill
+display_order: [beef, other, sausages, sides, salads, sandwiches, kids, dessert]
 grill:
-  beef_burger:
+  - class: beef
     name: Beef Burgers
     list:
       - name: Experience
@@ -27,7 +28,8 @@ grill:
         price: +50¢
       - name: veggies on the side 
         price: +50¢
-  other_burger:
+        
+  - class: other
     name: Lamb, Turkey, Veggie Burgers
     list: 
       - name: Garlicky Lamb
@@ -39,7 +41,17 @@ grill:
       - name: Veggie Burger
         ingredients: [House-fried falafel patty, shredded onion, cabbage, tzatziki sauce, red pepper pesto]
         price: $9.25
-  sides:
+        
+        
+  - class: sausages
+    name: House-Made Sausages
+    text: |
+        See specials menu for today’s selection.
+        Meat is *pasture-raised, antibiotic & hormone-free*
+        Made without nitrites, nitrates, or phosphates
+        House-ground, stuffed, and aged
+        
+  - class: sides
     name: Sides
     list:
       - name: Thin-Cut Russet Fries
@@ -57,8 +69,8 @@ grill:
         price: $2.75 
       - name: Small Garden Salad 
         ingredients: [Mixed-green, tomato, cucumber, red wine vinaigrette]
-        price: $4.75
-  salads:  
+        price: $4.75      
+  - class: salads
     name: Salads
     list:
       - name: Spinach and Chicken Salad
@@ -71,7 +83,8 @@ grill:
         ingredients: [Mixed greens, tomatoes, cucumbers, peppers, green beans, red onion, radishes, celery, blue cheese, pickled onions, and red wine vinaigrette]
         price: $8.25
     extras: Add a patty. Beef, turkey or veggie +$3.00, lamb +$4.75
-  sandwiches:
+
+  - class: sandwiches
     name: Sandwiches
     text: Choice of Russet fries, coleslaw, or German potato salad. Sweet potato fries (add $1.00)
     list: 
@@ -84,14 +97,9 @@ grill:
       - name: Gooooey Grilled Cheese
         ingredients: Tomato and bacon
         price: $7.25
-  sausages:
-    name: House-Made Sausages
-    text: |
-        See specials menu for today’s selection.
-        Meat is *pasture-raised, antibiotic & hormone-free*
-        Made without nitrites, nitrates, or phosphates
-        House-ground, stuffed, and aged
-  kids:
+
+
+  - class: kids
     name: Kids’ Menu (10 & under)
     list:  
       - name: Combo
@@ -105,7 +113,7 @@ grill:
       - name: Milk
         price: $1.50
 
-  dessert:
+  - class: dessert
     name: Dessert
     list:
       - name: Chocolate Chip Cookies
@@ -211,10 +219,10 @@ margin:0 auto;
   <section class="menu">
   
   {% for c in page.grill %}
-  <article class="{{c[0]}}">
-    <h3>{{c[1].name}}</h3>
+  <article class="{{c.class}}">
+    <h3>{{c.name}}</h3>
     
-    {% for merch in c[1].list %}
+    {% for merch in c.list %}
       <h4>
       {{merch.name}}
         <span class="price">
@@ -235,7 +243,7 @@ margin:0 auto;
         </small></p>
     {% endfor %}
   
-    {{c[1].text | markdownify}}
+    {{c.text | markdownify}}
   </article>
   {% endfor %}
   </section> 
