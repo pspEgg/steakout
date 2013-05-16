@@ -1,6 +1,6 @@
 ---
 title: grill
-display_order: [beef, other, sausages, sides, salads, sandwiches, kids, dessert]
+display_order: [beef, other, sausages, BREAK, sides, sandwiches, BREAK, salads, kids, dessert]
 grill:
   - class: beef
     name: Beef Burgers
@@ -186,7 +186,7 @@ ol,
 ul {
     padding: 0 0 0 40px;
 }
-small{
+.details{
 font-size:80%
 }
 
@@ -199,55 +199,65 @@ font-size:80%
 article{
 float:left;
 width:46%;
-margin:0 2%;
+margin:0 2% 2em 2%;
+}
+.clear{
+clear:both;
+width:100%;
+visibility: hidden;
 }
 /* Narrow Screen, Say iPhone in Portrait */
 @media only screen and (max-width: 470px){
 article{
 float:none;
 width:95%;
-margin:0 auto;
+margin:0 auto 1em auto;
 }
-}
-.empty{
-clear:both
 }
 </style>
 
 <body>
   <section class="wrapper">  
-  <h2>&#10026; DARINGMENUPAGE</h2>
+  <h2>&#10026; DARINGMENUPAGE 10</h2>
   <section class="menu">
-  
-  {% for c in page.grill %}
-  <article class="{{c.class}}">
-    <h3>{{c.name}}</h3>
-    
-    {% for merch in c.list %}
-      <h4>
-      {{merch.name}}
-        <span class="price">
-        {% for p in merch.price %}
-          {% if p[0] == nil %}
-            {{p}}
-          {% else %}
-            <span>{{p[0]}}: {{p[1]}}</span>
-          {% endif %}  
-        {% endfor %}    
-        </span>
-      </h4>
-      
-        <p><small>
-          {% for i in merch.ingredients %}
-          {{i}}{% if forloop.last %}.{% else %}, {% endif %}
-          {% endfor %}
-        </small></p>
-    {% endfor %}
-  
-    {{c.text | markdownify}}
-  </article>
-  <div class="empty"></div>
-  {% endfor %}
+  {% for category_name in page.display_order %}
+    {% if category_name == "BREAK" %}
+      <hr class="clear" />
+    {% else %}
+      {% for c in page.grill %}
+      {% if c.class == category_name %}
+      <article class="{{c.class}}">
+        <h3>{{c.name}}</h3>
+        
+        {% for merch in c.list %}
+          <h4>
+          {{merch.name}}
+            <span class="price">
+            {% for p in merch.price %}
+              {% if p[0] == nil %}
+                {{p}}
+              {% else %}
+                <span>{{p[0]}}: {{p[1]}}</span>
+              {% endif %}  
+            {% endfor %}    
+            </span>
+          </h4>
+          <section class="details">
+            <p>
+              {% for i in merch.ingredients %}
+              {{i}}{% if forloop.last %}.{% else %}, {% endif %}
+              {% endfor %}
+            </p>
+          </section>
+        {% endfor %}
+      <section class="details">
+        {{c.text | markdownify}}
+      </section>    
+      </article>
+      {% endif %}
+      {% endfor %}
+    {% endif %}
+  {% endfor %}    
   </section> 
   </section>
 </body>
