@@ -209,8 +209,9 @@ width:95%;
 margin:0 auto;
 }
 }
-
-
+.empty{
+clear:both
+}
 </style>
 
 <body>
@@ -245,6 +246,7 @@ margin:0 auto;
   
     {{c.text | markdownify}}
   </article>
+  <div class="empty"></div>
   {% endfor %}
   </section> 
   </section>
