@@ -30,19 +30,19 @@ VEGIE BURGER
 
 =MENU STARTS=
 -->
-
+{% assign Beer = site.pages[0] %}
+{% assign Grill = site.pages[1] %}
 
   <section class="featured">
-  
   </section>
   <section class="info">
-  
   </section>
-  <section class="beer">
-  </section>
-  <section class="grill">
-  </section>
-{% assign beers = site.pages[0].beers %}
+
+    {% include show_beers.html %}
+      <hr class="clear">
+    {% include show_grills.html %}
+
+
 
 
 

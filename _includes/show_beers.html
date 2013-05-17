@@ -1,0 +1,11 @@
+  <section class="menu">
+    {% for b in Beer.beers %}
+    <article class="beer">
+    <h4>{{b.Beer}}</h4>
+      <section class="details">
+        <div class="style">{{b.Style}}</div>
+        <div class="misc">{{b.Brewery}}<span class="abv">{{b.ABV}}</span></div>
+      </section>
+    </article>
+    {% endfor %}
+  </section>

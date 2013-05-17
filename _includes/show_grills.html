@@ -1,0 +1,40 @@
+ <section class="menu">  
+  {% for category_name in Grill.display_order %}
+    {% if category_name == "BREAK" %}
+      <hr class="clear" />
+    {% else %}
+      {% for c in Grill.grill %}
+      {% if c.class == category_name %}
+      <article class="{{c.class}}, grill">
+        <h3>{{c.name}}</h3>
+        
+        {% for merch in c.list %}
+          <h4>
+          {{merch.name}}
+            <span class="price">
+            {% for p in merch.price %}
+              {% if p[0] == nil %}
+                {{p}}
+              {% else %}
+                <span>{{p[0]}}: {{p[1]}}</span>
+              {% endif %}  
+            {% endfor %}    
+            </span>
+          </h4>
+          <section class="details">
+            <p>
+              {% for i in merch.ingredients %}
+              {{i}}{% if forloop.last %}.{% else %}, {% endif %}
+              {% endfor %}
+            </p>
+          </section>
+        {% endfor %}
+      <section class="details">
+        {{c.text | markdownify}}
+      </section>    
+      </article>
+      {% endif %}
+      {% endfor %}
+    {% endif %}
+  {% endfor %}    
+  </section> 

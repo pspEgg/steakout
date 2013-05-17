@@ -134,9 +134,11 @@ grill:
 <body>
   <section id="wrapper">  
   <h2>&#10026; DARINGMENUPAGE</h2>
-  <section class="menu">
+
   {% assign Grill = page  %}
-  
+  {% include show_grills.html %}
+  <!--
+  <section class="menu">  
   {% for category_name in Grill.display_order %}
     {% if category_name == "BREAK" %}
       <hr class="clear" />
@@ -176,6 +178,7 @@ grill:
     {% endif %}
   {% endfor %}    
   </section> 
+  -->
   </section>
 </body>
 
