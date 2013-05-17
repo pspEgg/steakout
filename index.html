@@ -1,52 +1,53 @@
 ---
 title: Menu
+
 ---
 
 <!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <title></title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Steakout | Grill</title>
 </head>
-
-<style type="text/css">
-body{
-  font-family:verdana; 
-}
-h1,h2,h3{
-  font-family: georgia;
-}
-.aside{
-	font-style: italic;
-	color:#8a8a8a
-}
-</style>
-
 <body>
 
-<h1>STEAKOUT</h1>
+<h1>Biergarten Steakout</h1>
+<section id="wrapper">
 
-<h2>BIERGARTEN</h2>
+<!--
+NEW Beer
+ - info
+NEW Beer 
+- info
+NEW Beer 
+- info
+GLUTEN FREE Beer
+- info -
+VEGIE BURGER
+- info -
 
+=MENU STARTS=
+-->
+
+
+  <section class="featured">
+  
+  </section>
+  <section class="info">
+  
+  </section>
+  <section class="beer">
+  </section>
+  <section class="grill">
+  </section>
 {% assign beers = site.pages[0].beers %}
 
-<ul class="beers">
-{% for beer in beers %}
-<li>
-<span class="aside">{{beer.Brewery}}</span>
-{{beer.Beer}}
-<span class="aside">{{beer.Style}} | {{beer.ABV}}</span>
-</li>
-{% endfor %}
-</ul>
 
 
 
-<h2>LOCAL FOODS</h2>
-
-
-
+</section>
 </body>
 
 </html>
