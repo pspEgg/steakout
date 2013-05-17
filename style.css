@@ -35,7 +35,7 @@ text-align: center;
 h4{
 margin:1em 0 0.2em 0;
 }
-h4 .price{
+h4 .price, .abv{
 font-weight:400;
 display: inline-block;
 float:right;
@@ -43,6 +43,13 @@ margin:0;
 }
 h4 .price span{
 margin-left: 0.5em;
+}
+/*beers*/
+div.style{
+margin-left: 0.5em;
+}
+.beer div{
+margin-top: 0.5em;
 }
 /*P_menu*/
 .menu p{
@@ -74,8 +81,8 @@ margin:0 2% 2em 2%;
 }
 article.beer{
 float:left;
-width: 23%;
-margin:0 1% 1em 1%;
+width: 21%;
+margin:0 2% 1em 2%;
 }
 .clear{
 clear:both;
@@ -92,8 +99,8 @@ visibility: hidden;
 @media only screen and (max-width: 650px){
   article.beer{
   float:left;
-  width:30.5%;
-  margin:0 1% 1em 1%;
+  width:29.3%;
+  margin:0 2% 1em 2%;
   }
 }
 /* Narrow Screen, Say iPhone in Portrait */
@@ -107,8 +114,8 @@ visibility: hidden;
 @media only screen and (max-width: 450px){
   article.beer{
   float:left;
-  width:48%;
-  margin:0 1% 1em 1%;
+  width:46%;
+  margin:0 2% 1em 2%;
   }
 }
 
