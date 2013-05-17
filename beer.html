@@ -88,8 +88,9 @@ beers:
 <body>
 <section id="wrapper">
 <h2>BIERGARTEN</h2>
+{% assign Beer = page %}
   <section class="menu">
-    {% for b in page.beers %}
+    {% for b in Beer.beers %}
     <article class="beer">
     <h4>{{b.Beer}}<span class="price">{{b.ABV}}</span></h4>
     <section class="details"><p>{{b.Brewery}}, {{b.Style}}</p></section>

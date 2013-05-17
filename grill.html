@@ -133,13 +133,15 @@ grill:
 
 <body>
   <section id="wrapper">  
-  <h2>&#10026; DARINGMENUPAGE 20</h2>
+  <h2>&#10026; DARINGMENUPAGE</h2>
   <section class="menu">
-  {% for category_name in page.display_order %}
+  {% assign Grill = page  %}
+  
+  {% for category_name in Grill.display_order %}
     {% if category_name == "BREAK" %}
       <hr class="clear" />
     {% else %}
-      {% for c in page.grill %}
+      {% for c in Grill.grill %}
       {% if c.class == category_name %}
       <article class="{{c.class}}, grill">
         <h3>{{c.name}}</h3>
