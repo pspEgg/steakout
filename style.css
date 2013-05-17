@@ -12,8 +12,9 @@ margin:0;
 padding:0;
 }
 .menu{
-  width:100%;
-  margin:0;
+max-width:1100px;
+width:100%;
+margin:0 auto;
 }
 h1,h2,h3,h4,h5,h6{
 font-family: Gill Sans;
@@ -56,7 +57,11 @@ ul {
 font-size:80%
 }
 
-/* Default 2 Column Layout */
+/* Layout */
+.menu{
+max-width:1100px;
+margin:0 auto;
+}
 .menu{
   width:100%;
   margin:0 auto;
@@ -69,13 +74,27 @@ margin:0 2% 2em 2%;
 }
 article.beer{
 float:left;
-width: 21%;
-margin:0 2% 2em 2%;
+width: 23%;
+margin:0 1% 1em 1%;
 }
 .clear{
 clear:both;
 width:100%;
 visibility: hidden;
+}
+/* fontSize up */
+@media only screen and (min-width: 750px){
+  body{
+  font-size: 16px;
+  }
+}
+/* 3 column beers, iphone 4 landsacpe */
+@media only screen and (max-width: 650px){
+  article.beer{
+  float:left;
+  width:30.5%;
+  margin:0 1% 1em 1%;
+  }
 }
 /* Narrow Screen, Say iPhone in Portrait */
 @media only screen and (max-width: 470px){
@@ -84,9 +103,12 @@ visibility: hidden;
   width:95%;
   margin:0 auto 1em auto;
   }
+}
+@media only screen and (max-width: 450px){
   article.beer{
   float:left;
-  width:46%;
-  margin:0 2% 2em 2%;
+  width:48%;
+  margin:0 1% 1em 1%;
   }
 }
+

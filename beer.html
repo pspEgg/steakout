@@ -82,23 +82,21 @@ beers:
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title></title>
-    
 </head>
 
-<style type="text/css">
-
-</style>
 
 <body>
-
+<section id="wrapper">
 <h2>BIERGARTEN</h2>
-{% for b in page.beers %}
-<article class="beer">
-<h4>{{b.Beer}}<span class="price">{{b.ABV}}</span></h4>
-<section class="details"><p>{{b.Brewery}}, {{b.Style}}</p></section>
-</article>
-{% endfor %}
-
+  <section class="menu">
+    {% for b in page.beers %}
+    <article class="beer">
+    <h4>{{b.Beer}}<span class="price">{{b.ABV}}</span></h4>
+    <section class="details"><p>{{b.Brewery}}, {{b.Style}}</p></section>
+    </article>
+    {% endfor %}
+  </section>
+</section>
 </body>
 
 </html>
