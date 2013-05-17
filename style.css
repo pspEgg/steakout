@@ -20,7 +20,7 @@ h1,h2,h3,h4,h5,h6{
 font-family: Gill Sans;
 font-weight: 800;
 }
-h2{
+h1, h2{
 letter-spacing: -0.065em;
 text-align:center;
 color:#222;
