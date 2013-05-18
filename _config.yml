@@ -1,3 +1,4 @@
 name: Steakout
 exclude: [dev]
 destination: ~/dev/dev.pspegg.co/bier/
+baseurl: /bier
