@@ -13,34 +13,38 @@ title: Menu
 </head>
 <body>
 
-<h1>Biergarten Steakout</h1>
-<section id="wrapper">
 
-<!--
-NEW Beer
- - info
-NEW Beer 
-- info
-NEW Beer 
-- info
-GLUTEN FREE Beer
-- info -
-VEGIE BURGER
-- info -
-
-=MENU STARTS=
--->
+<section id="wrapper">  
+    <h1>Biergarten Steakout</h1>
+  <section class="masthead">
+    <section class="blog">
+      <article>
+        <h4>Amber<strong>New</strong></h4>
+        <p>Our 3rd <em>Gluten Free</em> installment this week.</p>
+      </article>
+    </section>
+    <section class="info">
+      <h4>Hyper Links</h4>
+      <ul>
+      <li><a href="mailto:info@steakout.us?subject=Not%20Entirely%20Satisfied">info@<br>steakout.us</a></li>
+      <li><a href="#">383 Castro Street<br>Mountain View, CA<br>94041</a></li>
+      <li><a href="#">Grill Menu</a></li>
+      </ul> 
+    </section>
+  </section>
+  <hr class="clear">
+  
+  
 {% assign Beer = site.pages[0] %}
 {% assign Grill = site.pages[1] %}
 
-  <section class="featured">
-  </section>
-  <section class="info">
-  </section>
 
+      <h2>Beer Garden Menu</h2>
     {% include show_beers.html %}
       <hr class="clear">
+      <h2>Grill House Menu</h2>
     {% include show_grills.html %}
+    <hr class="clear">
 
 
 
