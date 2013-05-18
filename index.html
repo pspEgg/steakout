@@ -18,8 +18,7 @@ title: Menu
     <h1>Biergarten Steakout</h1>
     
   <section class="masthead">
-    <section class="blog">
-      <article>
+    <section class="blog">        
         <div class="date">
           <div class="month">{{site.time | date: "%b"}}</div>
           <div class="day">{{site.time | date: "%d"}}</div>
@@ -32,18 +31,24 @@ title: Menu
           <li><a href="#">(659)209-0383<br>message only</a></li>
           </ul> 
         </section>
+        
         {% assign first = site.posts[0] %}
-        <h4>{{first.title}}</h4>
-            <p>{{first.excerpt}} <a href="{{site.baseurl}}{{first.url}}">(read on)</a><p>
-        <h4>About</h4>
+        <article>
+          <h4>{{first.title}}</h4>
+              <p>{{first.excerpt}} <a href="{{site.baseurl}}{{first.url}}">(read on)</a><p>
+        </article>
+        
+        <section>
+          <h4>About</h4>
         <p>18 beers on draught including gluten free! (taps change often)
 Locally grown, 100% grass-fed beef.
 Potato brioche bun made with local, all natural starter.
 Locally sourced sausages.
 120 seat Beer Garden with authentic benches imported from Germany.</p>
+        </section>
+
         <h4>Hours</h4>
         <p>7 days a week, 11am to 9pm, later on Thursday, Friday, Saturday.
-      </article>
     </section>
   </section>
   <hr class="clear">
