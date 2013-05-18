@@ -1,3 +1,6 @@
+html{
+   -webkit-text-size-adjust: none;
+}
 body{
 font-size:13px;
 font-family: verdana, sans-serif;
@@ -5,7 +8,11 @@ width:100%;
 margin:0;
 padding:0;
 color: #333;
-background-color: #eee
+background-color: #eee;
+/*
+color: #eee;
+background-color:#333;
+*/
 }
 article, section{
 margin:0;
@@ -39,9 +46,6 @@ h1, h2{
   -webkit-border-radius: 3px;
   border-radius: 3px; /* future proofing */
   -khtml-border-radius: 3px; /* for old Konqueror browsers */
-}
-.month{
-  font-size: 1em;
 }
 .day{
   font-size:1.7em;
@@ -127,30 +131,23 @@ strong, .new{
   margin:0 auto;
   position: relative;
 }
-.masthead{
-  font-size:1em;
-  position:relative;
-}
-
 /* Masthead 2 Col*/
 .blog{
-  width:94%;
-  margin:0 3% 2em 3%;
+  width:96%;
+  margin:0 2% 2em 2%;
   float:left;
+}
+.blog p{
+  font-size:1em;
 }
 .info{
   word-wrap:break-word;
   max-width:30%;
   margin:0 0 0 2em;
   float:right;
-  font-size:1em;
 }
-.info h4{
-  font-size:1em;
+.masthead h4{
   margin-top:0;
-}
-.info article{
-
 }
 /* ------- */
 
