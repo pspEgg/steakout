@@ -1,6 +1,6 @@
 body{
 font-size:13px;
-font-family: verdana;
+font-family: verdana, sans-serif;
 width:100%;
 margin:0;
 padding:0;
@@ -17,7 +17,7 @@ width:100%;
 margin:0 auto;
 }
 h1,h2,h3,h4,h5,h6{
-font-family: Gill Sans;
+font-family: Gill Sans, helvetica;
 font-weight: 800;
 }
 h1, h2{
@@ -29,7 +29,7 @@ h1, h2{
   text-align:center;
   width:3.5em;
   padding:0.2em 0.3em;
-  margin:0.2em 1em 1em 0.5em;
+  margin:0.2em 1em 0em 0;
   float:left;
   background-color: #368760;
   color:#eee;
@@ -46,6 +46,11 @@ h1, h2{
 .day{
   font-size:1.7em;
 }
+
+.read_more a{
+  float:right;
+}
+
 h3{
 font-size:1.3em;
 margin: 0.8em 0;
@@ -88,7 +93,7 @@ ul{
   list-style: square outside none;
 }
 li{
-  margin-bottom:0.5em;
+  margin-bottom:0.8em;
 }
 ul, ol, p{
   margin: 0.7em 0 0 0;
@@ -129,15 +134,20 @@ strong, .new{
 
 /* Masthead 2 Col*/
 .blog{
-  width:60%;
-  margin:0 2% 2em 2%;
+  width:94%;
+  margin:0 3% 2em 3%;
   float:left;
 }
 .info{
   word-wrap:break-word;
-  max-width:32%;
-  margin:0 2% 2em 2%;
+  max-width:30%;
+  margin:0 0 0 2em;
   float:right;
+  font-size:1em;
+}
+.info h4{
+  font-size:1em;
+  margin-top:0;
 }
 .info article{
 
