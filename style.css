@@ -80,13 +80,16 @@ a{
 a:hover{
   color:#bada55;
 }
-strong{
+strong, .new{
   color: #eee;
   background-color:maroon;
   padding:0.2em 0.3em;
   margin:0 0.5em;
   text-transform:uppercase;
   font-weight:800;
+}
+.green{
+  color:green;
 }
 /* Layout */
 .menu, .masthead{
@@ -109,9 +112,9 @@ strong{
 }
 .info{
   word-wrap:break-word;
-  width:28%;
+  max-width:32;
   margin:0 2% 2em 2%;
-  float:left;
+  float:right;
 }
 .info article{
 
