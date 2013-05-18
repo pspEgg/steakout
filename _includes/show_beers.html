@@ -1,9 +1,23 @@
   <section class="menu">
     {% for b in Beer.beers %}
     <article class="beer">
-    <h4>{{b.Beer}}</h4>
+    <h4>
+          {{b.Beer}}
+        
+          {% for isnew in Beer.new %}
+            {% if b.Beer == isnew %}
+            <strong class="new">new</strong>
+            {% endif %}
+          {% endfor %}
+    </h4>
       <section class="details">
-        <div class="style">{{b.Style}}</div>
+        <div class="style">
+          {% if b.Tag != null %}
+           <span class="{{b.Tag}}">&bull;</span>
+          {% else %}
+          {% endif %}
+          {{b.Style}}
+        </div>
         <div class="misc">{{b.Brewery}}<span class="abv">{{b.ABV}}</span></div>
       </section>
     </article>

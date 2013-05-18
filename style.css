@@ -112,7 +112,7 @@ strong, .new{
 }
 .info{
   word-wrap:break-word;
-  max-width:32;
+  max-width:32%;
   margin:0 2% 2em 2%;
   float:right;
 }
