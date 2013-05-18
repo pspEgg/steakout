@@ -9,17 +9,23 @@ title: Menu
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Steakout | Grill</title>
+    <title>Biergarten Steakout</title>
 </head>
 <body>
 
 
 <section id="wrapper">  
     <h1>Biergarten Steakout</h1>
+    
   <section class="masthead">
     <section class="blog">
       <article>
-        <h4>Amber<strong>New</strong></h4>
+        <div class="date">
+          <div class="month">{{site.time | date: "%b"}}</div>
+          <div class="day">{{site.time | date: "%d"}}</div>
+        </div>
+        
+        <h4>Hey Guys</h4>
         <p>Our 3rd <em>Gluten Free</em> installment this week.</p>
       </article>
     </section>

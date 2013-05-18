@@ -24,8 +24,27 @@ h1, h2{
   font-size:2em;
   letter-spacing: -0.065em;
   text-align:center;
-  color:#222;
-  background-color:#eee;
+}
+.date{
+  text-align:center;
+  width:3.5em;
+  padding:0.2em 0.3em;
+  margin:0.2em 1em 1em 0.5em;
+  float:left;
+  background-color: #368760;
+  color:#eee;
+  font-weight:800;
+  text-transform:uppercase;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px; /* future proofing */
+  -khtml-border-radius: 3px; /* for old Konqueror browsers */
+}
+.month{
+  font-size: 1em;
+}
+.day{
+  font-size:1.7em;
 }
 h3{
 font-size:1.3em;
@@ -75,14 +94,14 @@ ul, ol, p{
   margin: 0.7em 0 0 0;
 }
 a{
-  color: #eee;
+  color: inherit;
 }
 a:hover{
-  color:#bada55;
+  color: #368760;
 }
 strong, .new{
   color: #eee;
-  background-color:green;
+  background-color:#368760;
   padding:0.1em 0.2em;
   margin:0 0.5em;
   text-transform:uppercase;
