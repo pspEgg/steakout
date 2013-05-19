@@ -1,84 +1,89 @@
 ---
-title: Menu
-
+title: Home
 ---
-
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Biergarten Steakout</title>
-</head>
-<body>
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Biergarten Steakout</title>
+      <meta name="description" content="Whole menu for beer garden and burger house in Mountainview, CA">
+      <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0">
 
+      <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
 
-<section id="wrapper">  
-    <h1>Biergarten Steakout</h1>
+  <div id="wrapper">  
     
-  <section class="masthead">
-    <section class="blog">        
-        <div class="date">
-          <div class="month">{{site.time | date: "%b"}}</div>
-          <div class="day">{{site.time | date: "%d"}}</div>
-        </div>
-        <section class="info">
-          <h4>Links</h4>
-          <ul>
-          <li><a href="mailto:info@steakout.us?subject=Not%20Entirely%20Satisfied">info@<br>steakout.us</a></li>
-          <li><a href="#">383 Castro Street<br>Mountain View, CA<br>94041</a></li>
-          <li><a href="#">(659)209-0383<br>message only</a></li>
-          <li><strong><a href="#new">new</a></strong></li>
-          </ul> 
-        </section>
+    <div id="masthead" role="header">
+          <div class="date">
+            <div class="month">{{site.time | date: "%b"}}</div>
+            <div class="day">{{site.time | date: "%d"}}</div>
+          </div>
+          <div id="sidebar">
+            <ul>
+            <li><a href="mailto:info@steakout.us?subject=Not%20Entirely%20Satisfied">info@<br>steakout.us</a></li>
+            <li><a href="#">383 Castro Street<br>Mountain View, CA<br>94041</a></li>
+            <li><a href="#">(659)209-0383<br>message only</a></li>
+            <li><strong><a href="#new">new</a></strong></li>
+            </ul> 
+          </div>
+          <h1>Menu of Biergarten Steakout</h1>
+          {% assign first = site.posts[0] %}
+          <div class="post" role="article">
+            <h4>{{first.title}}</h4>
+                <p>{{first.content}}<p>
+          </div>
         
-        {% assign first = site.posts[0] %}
-        <article>
-          <h4>{{first.title}}</h4>
-              <p>{{first.content}}<p>
-        </article>
-        
-        <section class="about">
-          <article>
-          <h4>About</h4>
-        <p>18 beers on draught including gluten free! (taps change often)
-Locally grown, 100% grass-fed beef.
-Potato brioche bun made with local, all natural starter.
-Locally sourced sausages.
-120 seat Beer Garden with authentic benches imported from Germany.</p>
-          </article>
-          <article>
-        <h4>Hours</h4>
-        <p>7 days a week, 11am to 9pm, later on Thursday, Friday, Saturday.</p>
-      </article>
-      </section>
-    </section>
-  </section>
-  <hr class="clear">
-  
-  
-  {% for p in site.pages %}
-    {% if p.title == 'beer' %}
-      {% assign Beer = p %}
-    {% elsif p.title == 'grill' %}
-      {% assign Grill = p %}
-    {% endif %}
-  {% endfor %}
-
-      <h2>Beer Garden Menu</h2>
-    {% include show_beers.html %}
-      <hr class="clear">
-      <h2>Grill House Menu</h2>
-    {% include show_grills.html %}
+          <div id="about" class="post" role="article">
+              <h4>About</h4>
+            <p>18 beers on draught including gluten free! (taps change often)
+    Locally grown, 100% grass-fed beef.
+    Potato brioche bun made with local, all natural starter.
+    Locally sourced sausages.
+    120 seat Beer Garden with authentic benches imported from Germany.</p>
+            </div>
+            
+          <div id="hours" class="post" role="article">
+              <h4>Hours</h4>
+              <p>7 days a week, 11am to 9pm, later on Thursday, Friday, Saturday.</p>
+            </div>
+    </div>
+    
     <hr class="clear">
+  
+    {% for p in site.pages %}
+      {% if p.title == 'beer' %}
+        {% assign Beer = p %}
+      {% elsif p.title == 'grill' %}
+        {% assign Grill = p %}
+      {% endif %}
+    {% endfor %}
+
+    <div id="menus">
+      {% include show_beers.html %}
+        <hr class="clear">
+      {% include show_grills.html %}
+      <hr class="clear">
+      <div id="menus">
 
 
 
 
 
+  </div>
 
-</section>
-</body>
 
+    <script>
+        var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src='//www.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
+
+  </body>
 </html>

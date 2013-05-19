@@ -2,93 +2,45 @@ html{
    -webkit-text-size-adjust: none;
 }
 body{
-font-size:13px;
-font-family: verdana, sans-serif;
-width:100%;
-margin:0;
-padding:0;
-color: #333;
-background-color: #eee;
-/*
-color: #eee;
-background-color:#333;
-*/
+  font-size:13px;
+  font-family: verdana, sans-serif;
+  width:100%;
+  margin:0;
+  padding:0;
+  color: #333;
+  background-color: #eee;
+  /*
+  color: #eee;
+  background-color:#333;
+  */
+  border-top:0.5em solid #333;
 }
-article, section{
-margin:0;
-padding:0;
+/* WRAPPER */
+#wrapper{
+  max-width:1100px;
+  width:100%;
+  margin:0.5em auto 0 auto;
 }
-.menu{
-max-width:1100px;
-width:100%;
-margin:0 auto;
-}
+/* Elements of Style*/
 h1,h2,h3,h4,h5,h6{
 font-family: Gill Sans, helvetica;
 font-weight: 800;
 }
-h1, h2{
+#masthead h1 {
+  font-size:1.5em;
+  margin:0;
+  margin-top:0;
+}
+h2{
   font-size:2em;
   letter-spacing: -0.065em;
   text-align:center;
 }
-.date{
-  text-align:center;
-  width:3.5em;
-  padding:0.2em 0.3em;
-  margin:0.2em 1em 0em 0;
-  float:left;
-  background-color:#368760;
-  color:#eee;
-  font-weight:800;
-  text-transform:uppercase;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px; /* future proofing */
-  -khtml-border-radius: 3px; /* for old Konqueror browsers */
-}
-.day{
-  font-size:1.7em;
-}
-
-.read_more a{
-  float:right;
-}
-
 h3{
 font-size:1.3em;
 margin: 0.8em 0;
 text-align: center;
 }
-/*H4_burger_sausage_etc*/
-h4{
-margin:1em 0 0.2em 0;
-}
-h4 .price, .abv{
-font-weight:400;
-display: inline-block;
-float:right;
-margin:0;
-}
-h4 .price span{
-margin-left: 0.5em;
-}
-/*beers*/
-div.style{
-margin-left: 0.5em;
-}
-.beer div{
-margin-top: 0.5em;
-}
-/*P_menu*/
-.menu p{
-clear: both;
-margin: 0 0 1em 0.5em;
-}
-.details{
-font-size:80%
-}
-/* Steakout Markdown */
 ul, ol{
   padding:0;
   margin:0 0 0 0;
@@ -132,50 +84,111 @@ strong a:hover{
 .favorite{
   color:maroon;
 }
-/* Layout */
-.menu, .masthead{
-  max-width:1100px;
-  margin:0 auto;
-  width:100%;
-  margin:0 auto;
-  position: relative;
+.date{
+  text-align:center;
+  width:3.5em;
+  padding:0.2em 0.3em;
+  margin:0.3em 1em 0em 0;
+  float:left;
+  background-color:#368760;
+  color:#eee;
+  font-weight:800;
+  text-transform:uppercase;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px; /* future proofing */
+  -khtml-border-radius: 3px; /* for old Konqueror browsers */
 }
+.day{
+  font-size:1.7em;
+}
+/* item-title */
+h4{
+  margin:1em 0 0.2em 0;
+  position:relative;
+}
+h4 .price, .abv{
+  font-weight:400;
+  display: inline-block;
+  position:absolute;
+  right:0;
+  margin:0;
+}
+h4 .price span{
+  margin-left: 0.5em;
+}
+/* beers */
+.beer-item .style{
+  margin-left: 0.5em;
+}
+.beer-item div{
+  margin-top: 0.5em;
+  position:relative;
+}
+.grill-category p{
+  clear: both;
+  margin: 0 0 1em 0.5em;
+}
+.details{
+  font-size:80%
+}
+/* Layout */
 /* Masthead 2 Col*/
-.blog{
+#masthead{
   width:96%;
   margin:0 2% 2em 2%;
   float:left;
 }
-.blog p{
-  margin-bottom:0.5em;
-}
-.info{
+#sidebar{
   word-wrap:break-word;
-  max-width:30%;
+  max-width:33%;
   margin:0 0 0 2em;
   float:right;
 }
-.masthead h4{
+#site-title{
   margin-top:0;
 }
-/* ------- */
-
-article.grill{
-float:left;
-width:46%;
-margin:0 2% 2em 2%;
+/* THE MENUS */
+.grill-category{
+  float:left;
+  width:46%;
+  margin:0 2% 2em 2%;
 }
-article.beer{
-float:left;
-width: 21%;
-margin:0 2% 1em 2%;
-white-space: nowrap;
+.beer-item{
+  float:left;
+  width: 20.5%; /*technically 21, but for ielt7*/
+  margin:0 2% 1em 2%;
+  white-space: nowrap;
 }
 .clear{
-clear:both;
-width:100%;
-visibility: hidden;
+  clear:both;
+  width:100%;
+  visibility: hidden;
 }
+    /* SUPER */
+    /*
+    @media only screen and (min-width:1500px){
+      #wrapper{
+        max-width:100%;    
+      }
+      #menus{
+        position:relative;
+      }
+      #beer-menu{
+        margin-left:2%;
+        width:48%;
+        position:absolute;
+        left:0;
+      }
+      #grill-menu{
+        margin-right:2%;
+        width:45%;
+        position:absolute;
+        right:0;
+      }
+    }
+    */
+    
 /* fontSize up */
 @media only screen and (min-width: 750px){
   body{
@@ -184,30 +197,33 @@ visibility: hidden;
 }
 /* 3 column beers, iphone 4 landsacpe */
 @media only screen and (max-width: 650px){
-  article.beer{
-  float:left;
-  width:29.3%;
-  margin:0 2% 1em 2%;
-  }
+  .beer-item{
+    width:29%; /* 29.3% */
+    margin:0 2% 1em 2%;
+    }
 }
 /* Narrow Screen, Say iPhone in Portrait */
 @media only screen and (max-width: 470px){
-  article.grill{
+  .grill-category{
   float:none;
   width:95%;
   margin:0 auto 1em auto;
   }
-  .about h4{
+  #masthead h4, #masthead p{
     font-size:1em;
-    float:left;
-    margin:0;
-    margin-right:1em;
+    display:inline;
+    margin-right:0.5em;
+  }
+  #masthead .post{
+    margin-top:0.8em;
+  }
+  #masthead h1{
+    font-size:1.2em;
   }
 }
 @media only screen and (max-width: 450px){
-  article.beer{
-  float:left;
-  width:46%;
+  .beer-item{
+  width:45.5%; /* 46% */
   margin:0 2% 1em 2%;
   }
 }

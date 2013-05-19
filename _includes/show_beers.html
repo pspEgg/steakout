@@ -1,6 +1,8 @@
-  <section class="menu">
+  <div id="beer-menu">
+    <h2>Grill House Menu</h2>
+
     {% for b in Beer.beers %}
-    <article class="beer">
+    <div class="beer-item">
     <h4>
           {{b.Beer}}
           {% for isnew in Beer.new %}
@@ -9,7 +11,7 @@
             {% endif %}
           {% endfor %}
     </h4>
-      <section class="details">
+      <div class="details">
         <div class="style">
           {% if b.Tag != null %}
            <span class="{{b.Tag}}">✚</span>
@@ -18,7 +20,7 @@
           {{b.Style}}
         </div>
         <div class="misc">{{b.Brewery}}<span class="abv">{{b.ABV}}</span></div>
-      </section>
-    </article>
+      </div>
+    </div>
     {% endfor %}
-  </section>
+  </div>

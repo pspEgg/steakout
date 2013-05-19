@@ -1,11 +1,12 @@
- <section class="menu">  
+<div id="grill-menu">  
+  <h2>Beer Garden Menu</h2>
   {% for category_name in Grill.display_order %}
     {% if category_name == "BREAK" %}
       <hr class="clear" />
     {% else %}
       {% for c in Grill.grill %}
       {% if c.class == category_name %}
-      <article class="{{c.class}}, grill">
+      <div class="{{c.class}}, grill-category">
         <h3>{{c.name}}</h3>
         
         {% for merch in c.list %}
@@ -35,20 +36,20 @@
             {% endfor %}    
             </span>
           </h4>
-          <section class="details">
+          <div class="details">
             <p>
               {% for i in merch.ingredients %}
               {{i}}{% if forloop.last %}.{% else %}, {% endif %}
               {% endfor %}
             </p>
-          </section>
+          </div>
         {% endfor %}
-      <section class="details">
+      <div class="details">
         {{c.text | markdownify}}
-      </section>    
-      </article>
+      </div>    
+      </div>
       {% endif %}
       {% endfor %}
     {% endif %}
   {% endfor %}    
-  </section> 
+  </div> 
