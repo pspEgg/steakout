@@ -119,6 +119,9 @@ strong, .new{
   border-radius: 3px; /* future proofing */
   -khtml-border-radius: 3px; /* for old Konqueror browsers */
 }
+strong a:hover{
+  color:#fff;
+}
 .new{
   padding:0.1em 0.2em;
   margin:0 0.5em;
