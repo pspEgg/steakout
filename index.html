@@ -55,9 +55,13 @@ Locally sourced sausages.
   <hr class="clear">
   
   
-{% assign Beer = site.pages[0] %}
-{% assign Grill = site.pages[1] %}
-
+  {% for p in site.pages %}
+    {% if p.title == 'beer' %}
+      {% assign Beer = p %}
+    {% elsif p.title == 'grill' %}
+      {% assign Grill = p %}
+    {% endif %}
+  {% endfor %}
 
       <h2>Beer Garden Menu</h2>
     {% include show_beers.html %}
