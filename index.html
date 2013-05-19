@@ -26,9 +26,9 @@ title: Home
           <div id="sidebar">
             <ul>
             <li><a href="mailto:info@steakout.us?subject=Not%20Entirely%20Satisfied">info@<br>steakout.us</a></li>
-            <li><a href="#">383 Castro Street<br>Mountain View, CA<br>94041</a></li>
-            <li><a href="#">(659)209-0383<br>message only</a></li>
-            <li><strong><a href="#new">new</a></strong></li>
+            <li><a href="">383 Castro Street<br>Mountain View, CA<br>94041</a></li>
+            <li><a href="tel:1-659-209-0383">(659)209-0383<br>message only</a></li>
+            <li>goto <strong><a href="#beer-menu">new</a></strong></li>
             </ul> 
           </div>
           <h1>Menu of Biergarten Steakout</h1>
@@ -40,16 +40,12 @@ title: Home
         
           <div id="about" class="post" role="article">
               <h4>About</h4>
-            <p>18 beers on draught including gluten free! (taps change often)
-    Locally grown, 100% grass-fed beef.
-    Potato brioche bun made with local, all natural starter.
-    Locally sourced sausages.
-    120 seat Beer Garden with authentic benches imported from Germany.</p>
+              <p>{% include about.txt %}</p>
             </div>
             
           <div id="hours" class="post" role="article">
               <h4>Hours</h4>
-              <p>7 days a week, 11am to 9pm, later on Thursday, Friday, Saturday.</p>
+              <p>{% include hours.txt %}</p>
             </div>
     </div>
     
@@ -76,65 +72,11 @@ title: Home
 
   </div>
 
-      <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
       <script>
           var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
           (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
           g.src='//www.google-analytics.com/ga.js';
           s.parentNode.insertBefore(g,s)}(document,'script'));
-      </script>
-    <!--
-      [Chris Coyier Smooth Scrolling](http://css-tricks.com/snippets/jquery/smooth-scrolling/)
-      -->
-      <script> 
-      $(document).ready(function() {
-        function filterPath(string) {
-        return string
-      
-          .replace(/^\//,'')
-          .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
-          .replace(/\/$/,'');
-        }
-        var locationPath = filterPath(location.pathname);
-        var scrollElem = scrollableElement('html', 'body');
-
-        $('a[href*=#]').each(function() {
-          var thisPath = filterPath(this.pathname) || locationPath;
-          if (  locationPath == thisPath
-          && (location.hostname == this.hostname || !this.hostname)
-          && this.hash.replace(/#/,'') ) {
-            var $target = $(this.hash), target = this.hash;
-            if (target) {
-              var targetOffset = $target.offset().top;
-              $(this).click(function(event) {
-                event.preventDefault();
-                $(scrollElem).animate({scrollTop: targetOffset}, 400, function() {
-                  location.hash = target;
-                });
-              });
-            }
-          }
-        });
-        // use the first element that is "scrollable"
-        function scrollableElement(els) {
-          for (var i = 0, argLength = arguments.length; i <argLength; i++) {
-            var el = arguments[i],
-                $scrollElement = $(el);
-            if ($scrollElement.scrollTop()> 0) {
-              return el;
-            } else {
-              $scrollElement.scrollTop(1);
-              var isScrollable = $scrollElement.scrollTop()> 0;
-              $scrollElement.scrollTop(0);
-              if (isScrollable) {
-                return el;
-              }
-            }
-          }
-          return [];
-        }
-
-      });
       </script>
     </body>
 </html>

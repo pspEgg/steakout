@@ -71,6 +71,11 @@ strong, .new{
   border-radius: 3px; /* future proofing */
   -khtml-border-radius: 3px; /* for old Konqueror browsers */
 }
+#menus .new{
+  font-size:0.65em;
+  position:relative;
+  bottom:0.4em;
+}
 strong a:hover{
   color:#fff;
 }
@@ -151,7 +156,7 @@ h4 .price span{
 /* THE MENUS */
 .grill-category{
   float:left;
-  width:46%;
+  width:45.5%; /*46%*/
   margin:0 2% 2em 2%;
 }
 .beer-item{
