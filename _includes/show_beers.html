@@ -3,10 +3,9 @@
     <article class="beer">
     <h4>
           {{b.Beer}}
-        
           {% for isnew in Beer.new %}
             {% if b.Beer == isnew %}
-            <strong class="new">new</strong>
+            <strong id="new" class="new">new</strong>
             {% endif %}
           {% endfor %}
     </h4>

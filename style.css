@@ -124,7 +124,7 @@ strong a:hover{
 }
 .new{
   padding:0.1em 0.2em;
-  margin:0 0.5em;
+  margin:0 0;
 }
 .green{
   color:#368760;
@@ -166,6 +166,7 @@ article.beer{
 float:left;
 width: 21%;
 margin:0 2% 1em 2%;
+white-space: nowrap;
 }
 .clear{
 clear:both;
