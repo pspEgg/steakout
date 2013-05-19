@@ -129,6 +129,9 @@ strong a:hover{
 .green{
   color:#368760;
 }
+.favorite{
+  color:maroon;
+}
 /* Layout */
 .menu, .masthead{
   max-width:1100px;

@@ -10,7 +10,21 @@
         
         {% for merch in c.list %}
           <h4>
+              {% if merch.tag == 'green' %}
+                 <span class="{{merch.tag}}">✚</span>
+              {% elsif merch.tag == 'favorite' %}
+                <span class="{{merch.tag}}">❦</span>
+              {% endif %}
+            
+            
           {{merch.name}}
+          
+          {% for isnew in Grill.new %}
+            {% if merch.name == isnew %}
+            <strong id="new" class="new">new</strong>
+            {% endif %}
+          {% endfor %}
+          
             <span class="price">
             {% for p in merch.price %}
               {% if p[0] == nil %}
