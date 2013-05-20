@@ -60,9 +60,15 @@ title: Home
     {% endfor %}
 
     <div id="menus">
-      {% include show_beers.html %}
+      <div id="beer-menu">
+        <h2>Beer Garden Menu</h2>
+          {% include show_beers.html %}
+      </div>
         <hr class="clear">
-      {% include show_grills.html %}
+        <div id="grill-menu">  
+          <h2>Grill House Menu</h2>
+            {% include show_grills.html %}
+        </div>
       <hr class="clear">
       <div id="menus">
 
