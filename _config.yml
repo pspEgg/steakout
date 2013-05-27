@@ -1,4 +1,4 @@
 name: Steakout
 exclude: [dev]
-destination: ~/dev/dev.pspegg.co/steakout/
+destination: ~/dev/bgso
 baseurl: /steakout
