@@ -1,6 +1,8 @@
 ---
 title: beer 
-new: [Amber, Hefe-Weiss, Joker Hard Cider]
+new: 
+  - Amber 
+  - Joker Hard Cider
 beers: 
   - Brewery: ACE
     Beer: Joker Hard Cider
