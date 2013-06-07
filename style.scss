@@ -1,3 +1,12 @@
+---
+
+---
+
+$red:#c61a1a;
+$cyan:#91c9fd;
+$blue:#4ba9ff;
+$gree:#368760;
+
 html{
    font-size:16px;
 }
@@ -13,7 +22,7 @@ body{
   color: #eee;
   background-color:#333;
   */
-  border-top:0.5em solid #333;
+  border-top:0.5em solid $cyan;
 }
 /* WRAPPER */
 #wrapper{
@@ -22,14 +31,26 @@ body{
   margin:0.5em auto 0 auto;
 }
 /* Elements of Style*/
+h2{
+}
 h1,h2,h3,h4,h5,h6{
 font-family: Gill Sans, helvetica;
 font-weight: 800;
 }
 #masthead h1 {
+  font-family:baskerville, serif;
+  color:#eee;
+  padding:0.2em 0.5em;
+  background-color:$blue;
   font-size:1.5em;
   margin:0;
   margin-top:0;
+  width:35%;
+  text-transform:uppercase;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px; /* future proofing */
+  -khtml-border-radius: 3px; /* for old Konqueror browsers */
 }
 h2{
   font-size:2em;
@@ -58,12 +79,12 @@ a{
   color: inherit;
 }
 a:hover{
-  color: #368760;
+  color: $cyan;
 }
 strong, .new{
   color: #eee;
   padding:0 0.2em;
-  background-color:#368760;
+  background-color:$red;
   text-transform:uppercase;
   font-weight:800;
   -moz-border-radius: 3px;

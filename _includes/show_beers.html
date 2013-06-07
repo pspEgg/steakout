@@ -10,8 +10,8 @@
     </h4>
       <div class="details">
         <div class="style">
-          {% if b.Tag != null %}
-           <span class="{{b.Tag}}">✚</span>
+          {% if b.Style contains 'Gluten' %}
+           <span class="green">✚</span>
           {% else %}
           {% endif %}
           {{b.Style}}

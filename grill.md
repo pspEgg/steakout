@@ -1,7 +1,7 @@
 ---
 title: grill
-new: [Chocolate Chip Cookies ]
 display_order: [beef, other, sausages, BREAK, sides, sandwiches, BREAK, salads, kids, dessert]
+new: 
 grill:
   - class: beef
     name: Beef Burgers
