@@ -17,7 +17,7 @@ body{
   margin:0;
   padding:0;
   color: #333;
-  background-color: #eee;
+  background-color: #fff;
   /*
   color: #eee;
   background-color:#333;
@@ -84,7 +84,7 @@ a:hover{
 strong, .new{
   color: #eee;
   padding:0 0.2em;
-  background-color:$red;
+  background-color:$blue;
   text-transform:uppercase;
   font-weight:800;
   -moz-border-radius: 3px;
@@ -105,7 +105,7 @@ strong a:hover{
   margin:0 0;
 }
 .green{
-  color:#368760;
+  color:$blue;
 }
 .favorite{
   color:maroon;
