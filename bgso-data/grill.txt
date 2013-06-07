@@ -1,6 +1,7 @@
 ---
 title: grill
-display_order: [beef, other, sausages, BREAK, sides, sandwiches, BREAK, salads, kids, dessert]
+display_order: 
+  [beef, other, sausages, BREAK, sides, sandwiches, BREAK, salads, kids, dessert]
 new: 
 grill:
   - class: beef
@@ -59,7 +60,6 @@ grill:
         price: $2.95 
       - name: Garlic Sweet Potato Fries
         price: $4.25 
-        tag: favorite
       - name: Onion Rings
         price: $5.50
       - name: Dipping Sauces
